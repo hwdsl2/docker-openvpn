@@ -26,7 +26,7 @@ SOFTWARE.
 
 This project is based in part on the work of Nyr and contributors:
 https://github.com/Nyr/openvpn-install   
-Copyright (C) 2013-2023 Nyr, licensed under the MIT License
+Copyright (C) 2013 Nyr, licensed under the MIT License
 
 ---
 

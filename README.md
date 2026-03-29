@@ -1,3 +1,5 @@
+[English](README.md) | [简体中文](README-zh.md) | [繁體中文](README-zh-Hant.md) | [Русский](README-ru.md)
+
 # OpenVPN Server on Docker
 
 [![Build Status](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml)
@@ -9,6 +11,8 @@ A Docker image to run an OpenVPN server. Based on Alpine Linux with OpenVPN and 
 - Modern cipher suite: AES-128-GCM, SHA256, tls-crypt
 - Persistent data via a Docker volume
 - Multi-arch: `linux/amd64`, `linux/arm64`, `linux/arm/v7`
+
+**Also available:** [WireGuard server on Docker](https://github.com/hwdsl2/docker-wireguard) | [IPsec VPN server on Docker](https://github.com/hwdsl2/docker-ipsec-vpn-server).
 
 ## Requirements
 

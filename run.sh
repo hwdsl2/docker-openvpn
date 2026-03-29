@@ -9,7 +9,7 @@
 # https://github.com/hwdsl2/docker-openvpn
 #
 # Copyright (C) 2026 Lin Song <linsongui@gmail.com>
-# Copyright (C) 2013-2023 Nyr
+# Copyright (C) 2013 Nyr
 #
 # Based on the work of Nyr and contributors at:
 # https://github.com/Nyr/openvpn-install
