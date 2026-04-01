@@ -42,6 +42,8 @@ docker cp openvpn:/etc/openvpn/clients/client.ovpn .
 
 Импортируйте `client.ovpn` в ваш клиент OpenVPN для подключения.
 
+В качестве альтернативы вы можете [настроить OpenVPN без Docker](https://github.com/hwdsl2/openvpn-install/blob/master/README-ru.md). Чтобы узнать больше о том, как использовать этот образ, прочитайте разделы ниже.
+
 ## Требования
 
 - Linux-сервер с публичным IP-адресом или DNS-именем
@@ -64,22 +66,6 @@ docker image tag quay.io/hwdsl2/openvpn-server hwdsl2/openvpn-server
 ```
 
 Поддерживаемые платформы: `linux/amd64`, `linux/arm64` и `linux/arm/v7`.
-
-## Обновление Docker-образа
-
-Для обновления Docker-образа и контейнера сначала [загрузите](#загрузка) последнюю версию:
-
-```bash
-docker pull hwdsl2/openvpn-server
-```
-
-Если Docker-образ уже актуален, вы увидите:
-
-```
-Status: Image is up to date for hwdsl2/openvpn-server:latest
-```
-
-В противном случае будет загружена последняя версия. Удалите и пересоздайте контейнер, следуя инструкциям из раздела [Быстрый старт](#быстрый-старт). Ваши данные сохранены в volume `openvpn-data`.
 
 ## Переменные окружения
 
@@ -197,6 +183,22 @@ cp vpn.env.example vpn.env
 docker compose up -d
 docker cp openvpn:/etc/openvpn/clients/client.ovpn .
 ```
+
+## Обновление Docker-образа
+
+Для обновления Docker-образа и контейнера сначала [загрузите](#загрузка) последнюю версию:
+
+```bash
+docker pull hwdsl2/openvpn-server
+```
+
+Если Docker-образ уже актуален, вы увидите:
+
+```
+Status: Image is up to date for hwdsl2/openvpn-server:latest
+```
+
+В противном случае будет загружена последняя версия. Удалите и пересоздайте контейнер, следуя инструкциям из раздела [Быстрый старт](#быстрый-старт). Ваши данные сохранены в volume `openvpn-data`.
 
 ## Технические детали
 

@@ -15,7 +15,7 @@ A Docker image to run an OpenVPN server. Based on Alpine Linux with OpenVPN and 
 
 **Also available:** Docker images for [WireGuard](https://github.com/hwdsl2/docker-wireguard), [IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server), and [Headscale](https://github.com/hwdsl2/docker-headscale).
 
-## Quick Start
+## Quick start
 
 **Step 1.** Start the OpenVPN server:
 
@@ -42,6 +42,8 @@ docker cp openvpn:/etc/openvpn/clients/client.ovpn .
 
 Import `client.ovpn` into your OpenVPN client to connect.
 
+Alternatively, you may [set up OpenVPN without Docker](https://github.com/hwdsl2/openvpn-install). To learn more about how to use this image, read the sections below.
+
 ## Requirements
 
 - A Linux server with a public IP address or DNS name
@@ -65,23 +67,7 @@ docker image tag quay.io/hwdsl2/openvpn-server hwdsl2/openvpn-server
 
 Supported platforms: `linux/amd64`, `linux/arm64` and `linux/arm/v7`.
 
-## Update Docker Image
-
-To update the Docker image and container, first [download](#download) the latest version:
-
-```bash
-docker pull hwdsl2/openvpn-server
-```
-
-If the Docker image is already up to date, you should see:
-
-```
-Status: Image is up to date for hwdsl2/openvpn-server:latest
-```
-
-Otherwise, it will download the latest version. Remove and re-create the container using instructions from [Quick Start](#quick-start). Your data is preserved in the `openvpn-data` volume.
-
-## Environment Variables
+## Environment variables
 
 All variables are optional. If not set, secure defaults are used automatically.
 
@@ -116,7 +102,7 @@ docker run \
     hwdsl2/openvpn-server
 ```
 
-## Client Management
+## Client management
 
 Use `docker exec` to manage clients with the `ovpn_manage` helper script.
 
@@ -147,7 +133,7 @@ docker exec -it openvpn ovpn_manage --revokeclient alice
 docker exec openvpn ovpn_manage --revokeclient alice -y
 ```
 
-## Persistent Data
+## Persistent data
 
 All server and client data is stored in the Docker volume (`/etc/openvpn` inside the container):
 
@@ -170,7 +156,7 @@ All server and client data is stored in the Docker volume (`/etc/openvpn` inside
 
 Back up the Docker volume to preserve all keys and client configurations.
 
-## IPv6 Support
+## IPv6 support
 
 If the Docker host has a public (global unicast) IPv6 address and the requirements below are met, IPv6 support is automatically enabled when the container starts. No manual configuration is needed.
 
@@ -198,7 +184,23 @@ docker compose up -d
 docker cp openvpn:/etc/openvpn/clients/client.ovpn .
 ```
 
-## Technical Details
+## Update Docker image
+
+To update the Docker image and container, first [download](#download) the latest version:
+
+```bash
+docker pull hwdsl2/openvpn-server
+```
+
+If the Docker image is already up to date, you should see:
+
+```
+Status: Image is up to date for hwdsl2/openvpn-server:latest
+```
+
+Otherwise, it will download the latest version. Remove and re-create the container using instructions from [Quick start](#quick-start). Your data is preserved in the `openvpn-data` volume.
+
+## Technical details
 
 - Base image: `alpine:3.23`
 - OpenVPN: latest available from Alpine packages

@@ -42,6 +42,8 @@ docker cp openvpn:/etc/openvpn/clients/client.ovpn .
 
 将 `client.ovpn` 导入到 OpenVPN 客户端即可连接。
 
+另外，你也可以在不使用 Docker 的情况下[安装 OpenVPN](https://github.com/hwdsl2/openvpn-install/blob/master/README-zh.md)。要了解更多有关如何使用本镜像的信息，请继续阅读以下部分。
+
 ## 系统要求
 
 - 具有公网 IP 地址或 DNS 名称的 Linux 服务器
@@ -64,22 +66,6 @@ docker image tag quay.io/hwdsl2/openvpn-server hwdsl2/openvpn-server
 ```
 
 支持平台：`linux/amd64`、`linux/arm64` 和 `linux/arm/v7`。
-
-## 更新 Docker 镜像
-
-要更新 Docker 镜像和容器，首先[下载](#下载)最新版本：
-
-```bash
-docker pull hwdsl2/openvpn-server
-```
-
-如果 Docker 镜像已是最新版本，将显示：
-
-```
-Status: Image is up to date for hwdsl2/openvpn-server:latest
-```
-
-否则将下载最新版本。按照[快速开始](#快速开始)中的说明删除并重新创建容器。数据保存在 `openvpn-data` 卷中。
 
 ## 环境变量
 
@@ -197,6 +183,22 @@ cp vpn.env.example vpn.env
 docker compose up -d
 docker cp openvpn:/etc/openvpn/clients/client.ovpn .
 ```
+
+## 更新 Docker 镜像
+
+要更新 Docker 镜像和容器，首先[下载](#下载)最新版本：
+
+```bash
+docker pull hwdsl2/openvpn-server
+```
+
+如果 Docker 镜像已是最新版本，将显示：
+
+```
+Status: Image is up to date for hwdsl2/openvpn-server:latest
+```
+
+否则将下载最新版本。按照[快速开始](#快速开始)中的说明删除并重新创建容器。数据保存在 `openvpn-data` 卷中。
 
 ## 技术细节
 
