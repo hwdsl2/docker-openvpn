@@ -39,6 +39,12 @@ check_dns_name() {
   printf '%s' "$1" | tr -d '\n' | grep -Eq "$FQDN_REGEX"
 }
 
+# Source bind-mounted env file if present (takes precedence over --env-file)
+if [ -f /vpn.env ]; then
+  # shellcheck disable=SC1091
+  . /vpn.env
+fi
+
 if [ ! -f "/.dockerenv" ] && [ ! -f "/run/.containerenv" ] \
   && [ -z "$KUBERNETES_SERVICE_HOST" ] \
   && ! head -n 1 /proc/1/sched 2>/dev/null | grep -q '^run\.sh '; then
