@@ -2,7 +2,7 @@ name: build cron
 
 on:
   schedule:
-    - cron: '30 3,15 * * *'
+    - cron: '30 3 * * 1,4'
 
 jobs:
   check_update:
