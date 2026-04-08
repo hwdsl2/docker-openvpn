@@ -13,7 +13,7 @@ A Docker image to run an OpenVPN server. Based on Alpine Linux with OpenVPN and 
 - Persistent data via a Docker volume
 - Multi-arch: `linux/amd64`, `linux/arm64`, `linux/arm/v7`
 
-**Also available:** Docker images for [WireGuard](https://github.com/hwdsl2/docker-wireguard), [IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server), [Headscale](https://github.com/hwdsl2/docker-headscale) and [LiteLLM](https://github.com/hwdsl2/docker-litellm).
+**Also available:** Docker images for [WireGuard](https://github.com/hwdsl2/docker-wireguard), [IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server), [Headscale](https://github.com/hwdsl2/docker-headscale), [LiteLLM](https://github.com/hwdsl2/docker-litellm) and [Whisper](https://github.com/hwdsl2/docker-whisper).
 
 ## Quick start
 
