@@ -21,6 +21,7 @@ RUN set -x \
          "https://github.com/OpenVPN/easy-rsa/releases/download/v${EASYRSA_VER}/EasyRSA-${EASYRSA_VER}.tgz" \
     && tar xzf /opt/src/easyrsa.tgz -C /opt/src/ \
     && mv "/opt/src/EasyRSA-${EASYRSA_VER}" /opt/src/easyrsa \
+    && chown -R root:root /opt/src/easyrsa \
     && rm -f /opt/src/easyrsa.tgz \
     && ln -s /opt/src/easyrsa/easyrsa /usr/local/bin/easyrsa \
     && easyrsa --version
