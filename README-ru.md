@@ -6,14 +6,21 @@
 
 Docker-образ для запуска сервера OpenVPN. Основан на Alpine Linux с OpenVPN и EasyRSA. Разработан как простой, современный и легко поддерживаемый.
 
+**Возможности:**
+
 - Автоматическая генерация PKI, сертификатов сервера и конфигурации клиента при первом запуске
 - Управление клиентами через вспомогательный скрипт (`ovpn_manage`)
 - Современный набор шифров: AES-128-GCM, SHA256, tls-crypt
-- Поддержка IPv6 при наличии публичного IPv6-адреса на сервере (см. [требования](#поддержка-ipv6))
+- Поддержка двойного стека IPv4 и IPv6 для VPN-клиентов
+- Автоматически собирается и публикуется через [GitHub Actions](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml)
 - Постоянное хранение данных через Docker volume
 - Поддержка нескольких архитектур: `linux/amd64`, `linux/arm64`, `linux/arm/v7`
 
-**Также доступно:** Docker-образы для [WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/README-ru.md), [IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-ru.md), [Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/README-ru.md), [LiteLLM](https://github.com/hwdsl2/docker-litellm/blob/main/README-ru.md) и [Whisper](https://github.com/hwdsl2/docker-whisper/blob/main/README-ru.md).
+**Также доступно:**
+
+- Без Docker: [Скрипт установки OpenVPN](https://github.com/hwdsl2/openvpn-install/blob/master/README-ru.md)
+- VPN: [WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/README-ru.md), [IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-ru.md), [Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/README-ru.md)
+- ИИ/Аудио: [Whisper (STT)](https://github.com/hwdsl2/docker-whisper/blob/main/README-ru.md), [Kokoro (TTS)](https://github.com/hwdsl2/docker-kokoro/blob/main/README-ru.md), [Embeddings](https://github.com/hwdsl2/docker-embeddings/blob/main/README-ru.md), [LiteLLM](https://github.com/hwdsl2/docker-litellm/blob/main/README-ru.md)
 
 ## Быстрый старт
 

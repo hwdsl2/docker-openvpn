@@ -6,14 +6,21 @@
 
 一個用於運行 OpenVPN 伺服器的 Docker 映像檔。基於 Alpine Linux，整合 OpenVPN 和 EasyRSA，設計目標是簡單、現代且易於維護。
 
+**功能特性：**
+
 - 首次啟動時自動產生 PKI、伺服器憑證以及客戶端設定
 - 使用輔助腳本（`ovpn_manage`）進行客戶端管理
 - 現代加密套件：AES-128-GCM、SHA256、tls-crypt
-- 伺服器有公用 IPv6 位址時支援 IPv6（參見[要求](#ipv6-支援)）
+- 為 VPN 客戶端提供雙協定棧 IPv4 和 IPv6 支援
+- 透過 [GitHub Actions](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml) 自動建置和發布
 - 使用 Docker 卷實現資料持久化
 - 多架構支援：`linux/amd64`、`linux/arm64`、`linux/arm/v7`
 
-**另提供：** [WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/README-zh-Hant.md)、[IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-zh-Hant.md)、[Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/README-zh-Hant.md)、[LiteLLM](https://github.com/hwdsl2/docker-litellm/blob/main/README-zh-Hant.md) 與 [Whisper](https://github.com/hwdsl2/docker-whisper/blob/main/README-zh-Hant.md) 的 Docker 映像。
+**另提供：**
+
+- 不使用 Docker：[OpenVPN 安裝腳本](https://github.com/hwdsl2/openvpn-install/blob/master/README-zh-Hant.md)
+- VPN：[WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/README-zh-Hant.md)、[IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-zh-Hant.md)、[Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/README-zh-Hant.md)
+- AI/音訊：[Whisper (STT)](https://github.com/hwdsl2/docker-whisper/blob/main/README-zh-Hant.md)、[Kokoro (TTS)](https://github.com/hwdsl2/docker-kokoro/blob/main/README-zh-Hant.md)、[Embeddings](https://github.com/hwdsl2/docker-embeddings/blob/main/README-zh-Hant.md)、[LiteLLM](https://github.com/hwdsl2/docker-litellm/blob/main/README-zh-Hant.md)
 
 ## 快速開始
 

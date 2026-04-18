@@ -4,16 +4,23 @@
 
 [![Build Status](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml) &nbsp;[![License: MIT](docs/images/license.svg)](https://opensource.org/licenses/MIT)
 
-A Docker image to run an OpenVPN server. Based on Alpine Linux with OpenVPN and EasyRSA. Designed to be simple, modern, and maintainable.
+Docker image to run an OpenVPN server. Based on Alpine Linux with OpenVPN and EasyRSA. Designed to be simple, modern, and maintainable.
+
+**Features:**
 
 - Automatically generates PKI, server certificates, and a client config on first start
 - Client management via a helper script (`ovpn_manage`)
 - Modern cipher suite: AES-128-GCM, SHA256, tls-crypt
-- IPv6 support when the server has a public IPv6 address (see [requirements](#ipv6-support))
+- Dual-stack IPv4 and IPv6 support for VPN clients
+- Automatically built and published via [GitHub Actions](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml)
 - Persistent data via a Docker volume
 - Multi-arch: `linux/amd64`, `linux/arm64`, `linux/arm/v7`
 
-**Also available:** Docker images for [WireGuard](https://github.com/hwdsl2/docker-wireguard), [IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server), [Headscale](https://github.com/hwdsl2/docker-headscale), [LiteLLM](https://github.com/hwdsl2/docker-litellm) and [Whisper](https://github.com/hwdsl2/docker-whisper).
+**Also available:**
+
+- Without Docker: [OpenVPN install script](https://github.com/hwdsl2/openvpn-install)
+- VPN: [WireGuard](https://github.com/hwdsl2/docker-wireguard), [IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server), [Headscale](https://github.com/hwdsl2/docker-headscale)
+- AI/Audio: [Whisper (STT)](https://github.com/hwdsl2/docker-whisper), [Kokoro (TTS)](https://github.com/hwdsl2/docker-kokoro), [Embeddings](https://github.com/hwdsl2/docker-embeddings), [LiteLLM](https://github.com/hwdsl2/docker-litellm)
 
 ## Quick start
 

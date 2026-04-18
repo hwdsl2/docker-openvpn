@@ -6,14 +6,21 @@
 
 一个用于运行 OpenVPN 服务器的 Docker 镜像。基于 Alpine Linux，集成 OpenVPN 和 EasyRSA，设计目标是简单、现代且易于维护。
 
+**功能特性：**
+
 - 首次启动时自动生成 PKI、服务器证书以及客户端配置
 - 使用辅助脚本（`ovpn_manage`）进行客户端管理
 - 现代加密套件：AES-128-GCM、SHA256、tls-crypt
-- 服务器有公网 IPv6 地址时支持 IPv6（参见[要求](#ipv6-支持)）
+- 为 VPN 客户端提供双栈 IPv4 和 IPv6 支持
+- 通过 [GitHub Actions](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml) 自动构建和发布
 - 使用 Docker 卷实现数据持久化
 - 多架构支持：`linux/amd64`、`linux/arm64`、`linux/arm/v7`
 
-**另提供：** [WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/README-zh.md)、[IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-zh.md)、[Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/README-zh.md)、[LiteLLM](https://github.com/hwdsl2/docker-litellm/blob/main/README-zh.md) 和 [Whisper](https://github.com/hwdsl2/docker-whisper/blob/main/README-zh.md) 的 Docker 镜像。
+**另提供：**
+
+- 不使用 Docker：[OpenVPN 安装脚本](https://github.com/hwdsl2/openvpn-install/blob/master/README-zh.md)
+- VPN：[WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/README-zh.md)、[IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-zh.md)、[Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/README-zh.md)
+- AI/音频：[Whisper (STT)](https://github.com/hwdsl2/docker-whisper/blob/main/README-zh.md)、[Kokoro (TTS)](https://github.com/hwdsl2/docker-kokoro/blob/main/README-zh.md)、[Embeddings](https://github.com/hwdsl2/docker-embeddings/blob/main/README-zh.md)、[LiteLLM](https://github.com/hwdsl2/docker-litellm/blob/main/README-zh.md)
 
 ## 快速开始
 
