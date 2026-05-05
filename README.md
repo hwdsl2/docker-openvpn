@@ -20,7 +20,7 @@ Docker image to run an OpenVPN server. Based on Alpine Linux with OpenVPN and Ea
 
 - Without Docker: [OpenVPN install script](https://github.com/hwdsl2/openvpn-install)
 - VPN: [WireGuard](https://github.com/hwdsl2/docker-wireguard), [IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server), [Headscale](https://github.com/hwdsl2/docker-headscale)
-- AI/Audio: [Whisper (STT)](https://github.com/hwdsl2/docker-whisper), [Kokoro (TTS)](https://github.com/hwdsl2/docker-kokoro), [Embeddings](https://github.com/hwdsl2/docker-embeddings), [LiteLLM](https://github.com/hwdsl2/docker-litellm), [Ollama (LLM)](https://github.com/hwdsl2/docker-ollama)
+- AI/Audio: [Self-hosted AI Stack](https://github.com/hwdsl2/docker-ai-stack)
 
 ## Quick start
 
