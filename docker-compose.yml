@@ -24,6 +24,7 @@ services:
 
 volumes:
   openvpn-data:
+    name: openvpn-data
 
 # networks:
 #   vpnnet:
