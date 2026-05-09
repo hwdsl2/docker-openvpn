@@ -217,6 +217,7 @@ services:
 
 volumes:
   openvpn-data:
+    name: openvpn-data
 ```
 
 ## Обновление Docker-образа
