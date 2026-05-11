@@ -2,7 +2,7 @@
 
 # OpenVPN Server on Docker
 
-[![Build Status](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml) &nbsp;[![License: MIT](docs/images/license.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml) &nbsp;[![Docker Pulls](https://img.shields.io/docker/pulls/hwdsl2/openvpn-server)](https://hub.docker.com/r/hwdsl2/openvpn-server) &nbsp;[![License: MIT](docs/images/license.svg)](https://opensource.org/licenses/MIT)
 
 Docker image to run an OpenVPN server. Based on Alpine Linux with OpenVPN and EasyRSA. Designed to be simple, modern, and maintainable.
 

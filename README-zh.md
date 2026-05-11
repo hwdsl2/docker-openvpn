@@ -2,7 +2,7 @@
 
 # 在 Docker 上运行 OpenVPN 服务器
 
-[![Build Status](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml) &nbsp;[![License: MIT](docs/images/license.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml) &nbsp;[![Docker Pulls](https://img.shields.io/docker/pulls/hwdsl2/openvpn-server)](https://hub.docker.com/r/hwdsl2/openvpn-server) &nbsp;[![License: MIT](docs/images/license.svg)](https://opensource.org/licenses/MIT)
 
 一个用于运行 OpenVPN 服务器的 Docker 镜像。基于 Alpine Linux，集成 OpenVPN 和 EasyRSA，设计目标是简单、现代且易于维护。
 
