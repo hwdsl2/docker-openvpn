@@ -51,8 +51,11 @@ docker cp openvpn:/etc/openvpn/clients/client.ovpn .
 
 В качестве альтернативы вы можете [настроить OpenVPN без Docker](https://github.com/hwdsl2/openvpn-install/blob/master/README-ru.md). Чтобы узнать больше о том, как использовать этот образ, прочитайте разделы ниже.
 
-> [!TIP]
-> [Подписаться на обновления проектов](https://selfhostedstack.beehiiv.com/subscribe?utm_campaign=vpn-ru) (1–2 письма в месяц) и получить бесплатные руководства по развёртыванию VPN и AI (PDF, на английском).
+## Сообщество
+
+- 📬 [Подписаться на обновления проектов](https://selfhostedstack.beehiiv.com/subscribe?utm_campaign=vpn-ru) (1–2 письма в месяц) — получить бесплатные руководства по развёртыванию VPN и AI (PDF, на английском)
+- 💬 Присоединяйтесь к сообществу [r/selfhostedstack](https://www.reddit.com/r/selfhostedstack/) для обсуждений и демонстрации проектов
+- ⭐ Поставьте звезду репозиторию, если он вам полезен
 
 ## Требования
 
@@ -238,11 +241,6 @@ Status: Image is up to date for hwdsl2/openvpn-server:latest
 ```
 
 В противном случае будет загружена последняя версия. Удалите и пересоздайте контейнер, следуя инструкциям из раздела [Быстрый старт](#быстрый-старт). Ваши данные сохранены в volume `openvpn-data`.
-
-## Сообщество
-
-- [Подписаться на обновления проектов](https://selfhostedstack.beehiiv.com/subscribe?utm_campaign=vpn-ru) (1–2 письма в месяц)
-- Присоединяйтесь к сообществу [r/selfhostedstack](https://www.reddit.com/r/selfhostedstack/) для обсуждений
 
 ## Технические детали
 
