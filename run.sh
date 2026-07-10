@@ -39,6 +39,71 @@ check_dns_name() {
   printf '%s' "$1" | tr -d '\n' | grep -Eq "$FQDN_REGEX"
 }
 
+usage_arch() {
+  local arch
+  arch=$(uname -m 2>/dev/null || printf 'unknown')
+  case "$arch" in
+    x86_64|amd64) printf 'amd64' ;;
+    aarch64|arm64) printf 'arm64' ;;
+    armv7l|armv7|armhf) printf 'armv7' ;;
+    *) printf 'other' ;;
+  esac
+}
+
+write_usage_state() {
+  local state_file version tmp_file
+  state_file=$1
+  version=$2
+  mkdir -p "$USAGE_STATE_DIR" || return 1
+  tmp_file=$(mktemp "$USAGE_STATE_DIR/.usage.XXXXXX") || return 1
+  printf '%s\n' "$version" > "$tmp_file" || return 1
+  chmod 0644 "$tmp_file" 2>/dev/null || true
+  mv "$tmp_file" "$state_file"
+}
+
+fetch_usage_asset() {
+  local asset base_url
+  asset=$1
+  base_url=${VPN_USAGE_BASE_URL:-https://github.com/hwdsl2/vpn-extras/releases/download/v1.1.0}
+  base_url=${base_url%/}
+  command -v wget >/dev/null 2>&1 || return 1
+  wget -q -T 5 -O /dev/null "$base_url/$asset" >/dev/null 2>&1
+}
+
+read_state_value() {
+  [ -r "$1" ] || return 0
+  tr -d '[:space:]' < "$1"
+}
+
+report_usage_counts() {
+  local current_version arch state_file last_version action
+
+  [ "${VPN_DISABLE_USAGE_COUNTS:-0}" != "1" ] || return 0
+  $data_mounted || return 0
+
+  current_version="${IMAGE_FLAVOR:-unknown}-${IMAGE_VER:-unknown}"
+  arch=$(usage_arch)
+  state_file="$USAGE_STATE_DIR/openvpn.version"
+  last_version=$(read_state_value "$state_file")
+  action=
+
+  if [ -z "$last_version" ]; then
+    if $data_existing; then
+      action=upgrade
+    else
+      action=deploy
+    fi
+  elif [ "$last_version" != "$current_version" ]; then
+    action=upgrade
+  fi
+
+  if [ -n "$action" ]; then
+    if fetch_usage_asset "vpn-v1-openvpn-$action-$arch"; then
+      write_usage_state "$state_file" "$current_version" || true
+    fi
+  fi
+}
+
 # Source bind-mounted env file if present (takes precedence over --env-file)
 if [ -f /vpn.env ]; then
   # shellcheck disable=SC1091
@@ -151,10 +216,19 @@ if [ -z "$ip6" ]; then
   fi
 fi
 
+OVPN_CONF="/etc/openvpn/server/server.conf"
+USAGE_STATE_DIR="/etc/openvpn/.openvpn-usage"
+data_mounted=false
+data_existing=false
+if grep -q " /etc/openvpn " /proc/mounts 2>/dev/null; then
+  data_mounted=true
+fi
+if $data_mounted && find /etc/openvpn -mindepth 1 -maxdepth 1 -print -quit 2>/dev/null | grep -q .; then
+  data_existing=true
+fi
+
 mkdir -p /etc/openvpn/server/easy-rsa
 mkdir -p /etc/openvpn/clients
-
-OVPN_CONF="/etc/openvpn/server/server.conf"
 
 echo
 echo "OpenVPN Docker - https://github.com/hwdsl2/docker-openvpn"
@@ -347,4 +421,5 @@ fi
 
 echo "Starting OpenVPN server..."
 echo
+report_usage_counts
 exec openvpn --cd /etc/openvpn/server --config server.conf
