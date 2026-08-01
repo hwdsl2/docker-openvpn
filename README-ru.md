@@ -12,7 +12,7 @@ Docker-образ для запуска сервера OpenVPN. Основан �
 - Управление клиентами через вспомогательный скрипт (`ovpn_manage`)
 - Современный набор шифров: AES-128-GCM, SHA256, tls-crypt
 - Поддержка двойного стека IPv4 и IPv6 для VPN-клиентов
-- Автоматически собирается и публикуется через [GitHub Actions](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml)
+- Автоматически собирается и публикуется через [GitHub Actions](https://github.com/hwdsl2/docker-openvpn/actions)
 - Постоянное хранение данных через Docker volume
 - Поддержка нескольких архитектур: `linux/amd64`, `linux/arm64`, `linux/arm/v7`
 

@@ -12,7 +12,7 @@
 - 使用辅助脚本（`ovpn_manage`）进行客户端管理
 - 现代加密套件：AES-128-GCM、SHA256、tls-crypt
 - 为 VPN 客户端提供双栈 IPv4 和 IPv6 支持
-- 通过 [GitHub Actions](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml) 自动构建和发布
+- 通过 [GitHub Actions](https://github.com/hwdsl2/docker-openvpn/actions) 自动构建和发布
 - 使用 Docker 卷实现数据持久化
 - 多架构支持：`linux/amd64`、`linux/arm64`、`linux/arm/v7`
 

@@ -12,7 +12,7 @@ Docker image to run an OpenVPN server. Based on Alpine Linux with OpenVPN and Ea
 - Client management via a helper script (`ovpn_manage`)
 - Modern cipher suite: AES-128-GCM, SHA256, tls-crypt
 - Dual-stack IPv4 and IPv6 support for VPN clients
-- Automatically built and published via [GitHub Actions](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml)
+- Automatically built and published via [GitHub Actions](https://github.com/hwdsl2/docker-openvpn/actions)
 - Persistent data via a Docker volume
 - Multi-arch: `linux/amd64`, `linux/arm64`, `linux/arm/v7`
 
