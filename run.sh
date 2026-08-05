@@ -223,7 +223,7 @@ data_existing=false
 if grep -q " /etc/openvpn " /proc/mounts 2>/dev/null; then
   data_mounted=true
 fi
-if $data_mounted && find /etc/openvpn -mindepth 1 -maxdepth 1 -print -quit 2>/dev/null | grep -q .; then
+if $data_mounted && [ -s "$OVPN_CONF" ]; then
   data_existing=true
 fi
 
