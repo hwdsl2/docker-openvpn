@@ -42,6 +42,7 @@ jobs:
             docker run \
               --name "$TEST_ID" \
               --restart=always \
+              -e VPN_DISABLE_USAGE_COUNTS=1 \
               -v openvpn-test-data:/etc/openvpn \
               -v ./vpn.env.example:/vpn.env:ro \
               -p 1194:1194/udp \
@@ -54,6 +55,7 @@ jobs:
             docker run \
               --name "$TEST_ID" \
               --restart=always \
+              -e VPN_DISABLE_USAGE_COUNTS=1 \
               -v openvpn-test-data:/etc/openvpn \
               -p 1194:1194/udp \
               -d --cap-add=NET_ADMIN \
