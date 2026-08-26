@@ -21,7 +21,7 @@ Docker-образ для запуска сервера OpenVPN. Основан �
 - Без Docker: [Скрипт установки OpenVPN](https://github.com/hwdsl2/openvpn-install/blob/master/README-ru.md)
 - VPN: [WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/README-ru.md), [IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-ru.md), [Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/README-ru.md)
 - AI: [Стек ИИ на своём сервере](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/README-ru.md) для локальных LLM, чата, RAG, голосовых функций и инструментов ИИ
-- :books: **Книги:** [The Self-Hosted AI Builder’s Guide](https://books2read.com/aiguide?store=amazon), [Privacy Tools in the Age of AI](https://books2read.com/privacy)
+- :books: Книги: [The Self-Hosted AI Builder’s Guide](https://books2read.com/aiguide?store=amazon), [Privacy Tools in the Age of AI](https://books2read.com/privacy)
 
 ## Быстрый старт
 
