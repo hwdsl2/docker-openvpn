@@ -11,7 +11,7 @@ WORKDIR /opt/src
 
 RUN set -x \
     && apk add --no-cache \
-         bash bind-tools coreutils iproute2 iptables iptables-legacy ip6tables \
+         bash bind-tools ca-certificates coreutils iproute2 iptables iptables-legacy ip6tables \
          openssl openvpn wget \
     && cd /sbin \
     && for fn in iptables iptables-save iptables-restore \
