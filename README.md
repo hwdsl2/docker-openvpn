@@ -21,9 +21,9 @@ Docker image to run an OpenVPN server. Based on Alpine Linux with OpenVPN and Ea
 - Without Docker: [OpenVPN install script](https://github.com/hwdsl2/openvpn-install)
 - VPN: [WireGuard](https://github.com/hwdsl2/docker-wireguard), [IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server), [Headscale](https://github.com/hwdsl2/docker-headscale)
 - AI: [Self-Hosted AI Stack](https://github.com/hwdsl2/self-hosted-ai-stack) for local LLMs, chat, RAG, voice and AI tools
-- 📚 Related reading: [Privacy Tools in the Age of AI](https://books2read.com/privacy)
+- 📚 [Privacy Tools in the Age of AI](https://books2read.com/privacy)
 
-> 📘 **Kindle Countdown Deal: $0.99/£0.99 (US & UK).** [The Self-Hosted AI Builder’s Guide](https://books2read.com/aiguide?store=amazon) is a practical guide to building, securing, and operating your own private AI stack.
+> 📘 Interested in self-hosted AI? [The Self-Hosted AI Builder’s Guide](https://books2read.com/aiguide?store=amazon) is a practical guide to local LLMs, RAG, voice, and secure deployment with Docker. **Ebook: $0.99/£0.99 through Sept. 20** (US/UK).
 
 ## Quick start
 
