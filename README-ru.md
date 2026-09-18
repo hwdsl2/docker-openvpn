@@ -21,9 +21,8 @@ Docker-образ для запуска сервера OpenVPN. Основан �
 - Без Docker: [Скрипт установки OpenVPN](https://github.com/hwdsl2/openvpn-install/blob/master/README-ru.md)
 - VPN: [WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/README-ru.md), [IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-ru.md), [Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/README-ru.md)
 - AI: [Стек ИИ на своём сервере](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/README-ru.md) для локальных LLM, чата, RAG, голосовых функций и инструментов ИИ
-- 📚 [Privacy Tools in the Age of AI](https://books2read.com/privacy)
 
-> 📘 Хотите развернуть ИИ на собственном сервере? [The Self-Hosted AI Builder’s Guide](https://books2read.com/aiguide?store=amazon) представляет собой практическое руководство по локальным большим языковым моделям, RAG, голосовому ИИ и безопасному развёртыванию с Docker. **Электронная книга: $0.99/£0.99 до 20 сентября включительно** (США/Великобритания).
+> 📘 Хотите развернуть ИИ на собственном сервере? [The Self-Hosted AI Builder’s Guide](https://books2read.com/aiguide?store=amazon): **Электронная книга за $0.99/£0.99 до 20 сентября включительно** (США/Великобритания). Практическое руководство по созданию, защите и эксплуатации собственного приватного ИИ-стека.
 
 ## Быстрый старт
 
@@ -262,6 +261,10 @@ Status: Image is up to date for hwdsl2/openvpn-server:latest
 - Сертификаты клиентов: срок действия 10 лет
 - Подсеть VPN: `10.8.0.0/24`
 - Подсеть VPN IPv6: `fddd:1194:1194:1194::/64` (при наличии IPv6 на сервере)
+
+## Дополнительная литература
+
+📚 Подробнее о защите вашей конфиденциальности в интернете читайте в книге [Privacy Tools in the Age of AI](https://books2read.com/privacy).
 
 ## Лицензия
 
