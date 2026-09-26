@@ -253,7 +253,7 @@ Status: Image is up to date for hwdsl2/openvpn-server:latest
 
 - Базовый образ: `alpine:3.23`
 - OpenVPN: последняя версия из пакетов Alpine
-- EasyRSA: 3.2.6 (включён в образ при сборке)
+- EasyRSA: включён в образ при сборке
 - Шифр: AES-128-GCM
 - Аутентификация: SHA256
 - Обмен ключами: tls-crypt (HMAC + шифрование)

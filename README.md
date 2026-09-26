@@ -253,7 +253,7 @@ This image uses public GitHub release asset download counts for anonymous, aggre
 
 - Base image: `alpine:3.23`
 - OpenVPN: latest available from Alpine packages
-- EasyRSA: 3.2.6 (bundled at build time)
+- EasyRSA: bundled at build time
 - Cipher: AES-128-GCM
 - Auth: SHA256
 - Key exchange: tls-crypt (HMAC + encrypt)

@@ -253,7 +253,7 @@ Status: Image is up to date for hwdsl2/openvpn-server:latest
 
 - 基础镜像：`alpine:3.23`
 - OpenVPN：来自 Alpine 软件包的最新版本
-- EasyRSA：3.2.6（构建时内置）
+- EasyRSA：构建时内置
 - 加密算法：AES-128-GCM
 - 认证：SHA256
 - 密钥交换：tls-crypt（HMAC + 加密）
