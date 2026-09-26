@@ -6,7 +6,7 @@
 
 FROM alpine:3.23
 
-ENV EASYRSA_VER=3.2.6
+ENV EASYRSA_VER=3.2.7
 WORKDIR /opt/src
 
 RUN set -x \
