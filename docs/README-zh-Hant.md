@@ -1,8 +1,8 @@
-[English](README.md) | [简体中文](README-zh.md) | [繁體中文](README-zh-Hant.md) | [Русский](README-ru.md)
+[English](../README.md) | [简体中文](README-zh.md) | [繁體中文](README-zh-Hant.md) | [Русский](README-ru.md)
 
 # 在 Docker 上運行 OpenVPN 伺服器
 
-[![Build Status](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml) &nbsp;[![Docker Pulls](https://raw.githubusercontent.com/hwdsl2/badges/main/img/docker-pulls-openvpn-server.svg)](https://hub.docker.com/r/hwdsl2/openvpn-server) &nbsp;[![License: MIT](docs/images/license.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml) &nbsp;[![Docker Pulls](https://raw.githubusercontent.com/hwdsl2/badges/main/img/docker-pulls-openvpn-server.svg)](https://hub.docker.com/r/hwdsl2/openvpn-server) &nbsp;[![License: MIT](images/license.svg)](https://opensource.org/licenses/MIT)
 
 一個用於運行 OpenVPN 伺服器的 Docker 映像檔。基於 Alpine Linux，整合 OpenVPN 和 EasyRSA，設計目標是簡單、現代且易於維護。
 
@@ -19,8 +19,8 @@
 **另提供：**
 
 - 不使用 Docker：[OpenVPN 安裝腳本](https://github.com/hwdsl2/openvpn-install/blob/master/README-zh-Hant.md)
-- VPN：[WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/README-zh-Hant.md)、[IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-zh-Hant.md)、[Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/README-zh-Hant.md)
-- AI：[自架 AI 套件](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/README-zh-Hant.md)，用於本機 LLM、聊天、RAG、語音和 AI 工具
+- VPN：[WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/docs/README-zh-Hant.md)、[IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-zh-Hant.md)、[Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/docs/README-zh-Hant.md)
+- AI：[自架 AI 套件](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/docs/README-zh-Hant.md)，用於本機 LLM、聊天、RAG、語音和 AI 工具
 
 > 📘 對自架 AI 有興趣嗎？[The Self-Hosted AI Builder’s Guide](https://books2read.com/aiguide?store=amazon) 是一本關於建置、保護和維運自己的私有 AI 技術堆疊的實用指南。
 
@@ -86,7 +86,7 @@ docker image tag quay.io/hwdsl2/openvpn-server hwdsl2/openvpn-server
 
 所有變數均為選用。未設定時將自動使用安全預設值。
 
-此 Docker 映像檔使用以下變數，可以在 `env` 檔案中宣告（參見[範例](vpn.env.example)）：
+此 Docker 映像檔使用以下變數，可以在 `env` 檔案中宣告（參見[範例](../vpn.env.example)）：
 
 | 變數 | 說明 | 預設值 |
 |---|---|---|

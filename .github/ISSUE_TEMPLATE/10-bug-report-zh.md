@@ -8,7 +8,7 @@ assignees: ''
 ---
 **任务列表**
 
-- [ ] 我已阅读[自述文件](https://github.com/hwdsl2/docker-openvpn/blob/main/README-zh.md)或相关章节
+- [ ] 我已阅读[自述文件](https://github.com/hwdsl2/docker-openvpn/blob/main/docs/README-zh.md)或相关章节
 - [ ] 我搜索了已有的 [Issues](https://github.com/hwdsl2/docker-openvpn/issues?q=is%3Aissue)
 - [ ] 这个问题是关于 OpenVPN Docker 镜像/配置，而不只是 OpenVPN 本身或客户端应用
 

@@ -1,8 +1,8 @@
-[English](README.md) | [简体中文](README-zh.md) | [繁體中文](README-zh-Hant.md) | [Русский](README-ru.md)
+[English](../README.md) | [简体中文](README-zh.md) | [繁體中文](README-zh-Hant.md) | [Русский](README-ru.md)
 
 # Сервер OpenVPN на Docker
 
-[![Build Status](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml) &nbsp;[![Docker Pulls](https://raw.githubusercontent.com/hwdsl2/badges/main/img/docker-pulls-openvpn-server.svg)](https://hub.docker.com/r/hwdsl2/openvpn-server) &nbsp;[![License: MIT](docs/images/license.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml/badge.svg)](https://github.com/hwdsl2/docker-openvpn/actions/workflows/main.yml) &nbsp;[![Docker Pulls](https://raw.githubusercontent.com/hwdsl2/badges/main/img/docker-pulls-openvpn-server.svg)](https://hub.docker.com/r/hwdsl2/openvpn-server) &nbsp;[![License: MIT](images/license.svg)](https://opensource.org/licenses/MIT)
 
 Docker-образ для запуска сервера OpenVPN. Основан на Alpine Linux с OpenVPN и EasyRSA. Разработан как простой, современный и легко поддерживаемый.
 
@@ -19,8 +19,8 @@ Docker-образ для запуска сервера OpenVPN. Основан �
 **Также доступно:**
 
 - Без Docker: [Скрипт установки OpenVPN](https://github.com/hwdsl2/openvpn-install/blob/master/README-ru.md)
-- VPN: [WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/README-ru.md), [IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-ru.md), [Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/README-ru.md)
-- AI: [Стек ИИ на своём сервере](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/README-ru.md) для локальных LLM, чата, RAG, голосовых функций и инструментов ИИ
+- VPN: [WireGuard](https://github.com/hwdsl2/docker-wireguard/blob/main/docs/README-ru.md), [IPsec VPN](https://github.com/hwdsl2/docker-ipsec-vpn-server/blob/master/README-ru.md), [Headscale](https://github.com/hwdsl2/docker-headscale/blob/main/docs/README-ru.md)
+- AI: [Стек ИИ на своём сервере](https://github.com/hwdsl2/self-hosted-ai-stack/blob/main/docs/README-ru.md) для локальных LLM, чата, RAG, голосовых функций и инструментов ИИ
 
 > 📘 Хотите развернуть ИИ на собственном сервере? [The Self-Hosted AI Builder’s Guide](https://books2read.com/aiguide?store=amazon): практическое руководство по созданию, защите и эксплуатации собственного приватного ИИ-стека.
 
@@ -86,7 +86,7 @@ docker image tag quay.io/hwdsl2/openvpn-server hwdsl2/openvpn-server
 
 Все переменные необязательны. Если не заданы, автоматически используются безопасные значения по умолчанию.
 
-Этот Docker-образ использует следующие переменные, которые можно задать в файле `env` (см. [пример](vpn.env.example)):
+Этот Docker-образ использует следующие переменные, которые можно задать в файле `env` (см. [пример](../vpn.env.example)):
 
 | Переменная | Описание | Значение по умолчанию |
 |---|---|---|
